@@ -55,4 +55,102 @@ TypeError: 'list' object is not callable
 >>> t = [1,2,3,4,5]
 >>> for w in t
 SyntaxError: invalid syntax
+>>> t = [1,2,3,4,5]
+>>> t
+[1, 2, 3, 4, 5]
+>>> for w in t
+SyntaxError: invalid syntax
+>>> for w in t:
+	sum+=t[w]
+
+	
+Traceback (most recent call last):
+  File "<pyshell#5>", line 2, in <module>
+    sum+=t[w]
+TypeError: unsupported operand type(s) for +=: 'builtin_function_or_method' and 'int'
+>>> sum = 0
+>>> for w in t:
+	sum = sum + t[w]
+
+	
+Traceback (most recent call last):
+  File "<pyshell#9>", line 2, in <module>
+    sum = sum + t[w]
+IndexError: list index out of range
+>>> sum = t[0] + t[1] + t[2] + t[3] +t[4]
+>>> average = sum/len(t)
+>>> average
+3.0
+>>> words = ["the", "quick", "brown", "fox"]
+>>> words
+['the', 'quick', 'brown', 'fox']
+>>> words.capitalize
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    words.capitalize
+AttributeError: 'list' object has no attribute 'capitalize'
+>>> words.capitalize()
+Traceback (most recent call last):
+  File "<pyshell#16>", line 1, in <module>
+    words.capitalize()
+AttributeError: 'list' object has no attribute 'capitalize'
+>>> words[0].capitalize()
+'The'
+>>> 
+>>> words[1].capitalize()
+'Quick'
+>>> words[].capitalize()
+SyntaxError: invalid syntax
+>>> words[2].capitalize()
+'Brown'
+>>> words[3].capitalize()
+'Fox'
+>>> words[4].capitalize()
+Traceback (most recent call last):
+  File "<pyshell#23>", line 1, in <module>
+    words[4].capitalize()
+IndexError: list index out of range
+>>> words
+['the', 'quick', 'brown', 'fox']
+>>> [words.captialize() for words]
+SyntaxError: invalid syntax
+>>> [words.captialize() for words in ["the", "quick", "brown", "fox"]
+KeyboardInterrupt
+>>> a = ["A","B","C","D"]
+>>> a[0].lower()
+'a'
+>>> a[1].lower()
+'b'
+>>> a[2].lower()
+'c'
+>>> a[3].lower()
+'d'
+>>> b = "'happy', 'cars'".split()
+>>> b
+["'happy',", "'cars'"]
+>>> b = "happy, freedom, running, clockspeoplecars".split()
+>>> b
+['happy,', 'freedom,', 'running,', 'clockspeoplecars']
+>>> b = "happy freedom running clocks cars".split()
+>>> b
+['happy', 'freedom', 'running', 'clocks', 'cars']
+>>> b.insert(3, 'lol')
+>>> b
+['happy', 'freedom', 'running', 'lol', 'clocks', 'cars']
+>>> b.sort()
+>>> b
+['cars', 'clocks', 'freedom', 'happy', 'lol', 'running']
+>>> b.pop(3)
+'happy'
+>>> b
+['cars', 'clocks', 'freedom', 'lol', 'running']
+>>> b
+'cars clocks freedom lol running'
+>>> a = [[1,2,3],[4,5,6],[7,8,9]]
+>>> a
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+>>> a[0][0]
+1
+>>> a[2][2]
+9
 >>> 
