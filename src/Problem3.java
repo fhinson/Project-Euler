@@ -10,6 +10,7 @@ public class Problem3 {
 			if(600851475143L % i == 0){
 				if(primecheck(i)==true && i!= 1){
 					Primes.add(i);
+					System.out.println("Adding " + i);
 				}
 			}
 		}
