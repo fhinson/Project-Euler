@@ -2,7 +2,6 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-
 public class Problem29 {
 	
 	public static void main(String[] args){
