@@ -16,16 +16,20 @@ public class Problem50 {
 			if (primecheck(i)==true){
 				primes.add(i);
 				System.out.println(i);
-				for (int j = 0; j<primes.size()-1;j++){
-					sumcheck+=primes.get(j);
-					if(sumcheck == i){
-						System.out.println("BINGO !!!!" + i + " with a length of " + (j+1));
-						break;
+				for (int k = 0; k <primes.size()-1; k++){
+					for (int j = k; j<primes.size()-1;j++){
+						sumcheck+=primes.get(j);
+						if(sumcheck == i){
+							System.out.println("BINGO !!!!" + i + " with a length of " + (j+1));
+							break;
+						}
 					}
+					sumcheck = 0;
 				}
 				sumcheck = 0;
 			}
 		}
+		System.out.println(primes);
 	}
 
 }
