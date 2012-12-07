@@ -13,7 +13,6 @@ public class Problem50 {
 		ArrayList<Integer> primes = new ArrayList<Integer>();
 		int sumcheck = 0;
 		for (int i = 2; i < 1000000; i++){
-			//System.out.println(i);
 			if (primecheck(i)==true){
 				primes.add(i);
 				System.out.println(i);
