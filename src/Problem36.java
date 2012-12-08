@@ -1,16 +1,13 @@
 import java.math.BigInteger;
 import java.util.ArrayList;
 
-
 public class Problem36 {
-
 
 	public static void main(String[] args) {
 		int sum = 0;
 		for (int i = 1; i <= 1000000; i++){
 			BigInteger binary = new BigInteger(Integer.toBinaryString(i));
 			if(evaluator(BigInteger.valueOf(i)) == true && evaluator(binary)== true){
-				System.out.println(i + " is a bingo!");	
 				sum+=i;
 			}
 		}
