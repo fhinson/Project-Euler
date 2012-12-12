@@ -32,5 +32,26 @@ public class lister {
 	
 	public static void main(String[] args){
 		printer(list(540));
+		printer(newlister(54032));
+	}
+	
+	
+	public static int[] newlister(int x){
+		String y = Integer.toString(x);
+		
+		char[] c = new char[y.length()];
+
+		for (int counter = 0; counter < y.length(); counter++){	
+			c[counter] = y.charAt(counter);
+		}
+		
+		int[]n = new int[c.length];
+		
+		for (int i = 0; i < n.length; i++){
+			n[i] = Integer.parseInt(Character.toString(c[i]));
+		}
+		
+		return n;
+	
 	}
 }
