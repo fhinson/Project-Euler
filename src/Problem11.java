@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class Problem11 {
@@ -27,6 +28,19 @@ public class Problem11 {
 			1,70,54,71,83,51,54,69,16,92,33,48,61,43,52,01,89,19,67,48};
 	
 	ArrayList<Integer> sums = new ArrayList<Integer>();
+	
+	for (int i = 0; i < list.length; i++){
+		if(i < list.length-3)
+			sums.add(list[i]*list[i+1]*list[i+2]*list[i+3]);
+		if(i < 340)
+			sums.add(list[i]*list[i+20]*list[i+40]*list[i+60]);
+		if(i < 337)
+			sums.add(list[i]*list[i+21]*list[i+42]*list[i+63]);
+		if(i < 340)
+			sums.add(list[i]*list[i+19]*list[i+38]*list[i+57]);
+	}
+	
+	System.out.println("Greatest is " + Collections.max(sums));
 
 	}
 }
