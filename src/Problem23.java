@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 
 
 public class Problem23 {
@@ -25,7 +26,24 @@ public class Problem23 {
 		}
 		else return false;
 	}
+	
 	public static void main(String[] args){
-		System.out.println(abundant(6));
+		ArrayList<Integer> sums = new ArrayList<Integer>();
+		
+		for (int i = 12; i <= 1000; i++){
+			for (int j = 12; j <= 1000; j++){
+				if (abundant(i) == true && abundant(j) == true){
+					sums.add(i+j);
+					//System.out.println(sums);
+				}
+			}
+		}
+		
+		HashSet hs = new HashSet();
+		 hs.addAll(sums);
+		 sums.clear();
+		 sums.addAll(hs);
+		 
+		 System.out.println(sums);
 	}
 }
