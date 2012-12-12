@@ -36,22 +36,14 @@ public class lister {
 	}
 	
 	
-	public static int[] newlister(int x){
-		String y = Integer.toString(x);
+	public static int[] newlister (int x) {
+		String p = Integer.toString(x);
+		char[] charArray = p.toCharArray();
+		int[] array = new int[charArray.length];
 		
-		char[] c = new char[y.length()];
-
-		for (int counter = 0; counter < y.length(); counter++){	
-			c[counter] = y.charAt(counter);
+		for (int i = 0; i < array.length; i++) {
+			array[i] = Integer.parseInt(Character.toString(charArray[i]));
 		}
-		
-		int[]n = new int[c.length];
-		
-		for (int i = 0; i < n.length; i++){
-			n[i] = Integer.parseInt(Character.toString(c[i]));
-		}
-		
-		return n;
-	
+		return array;
 	}
 }
