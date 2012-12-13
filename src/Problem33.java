@@ -51,11 +51,8 @@ public class Problem33 {
 		int y = t.length() - 1;
 		
 		double [] array = new double[y+1];
-		
 		for (int counter = y; counter >= 0; counter--) {
-			
 			double a = z / (Math.pow(10, counter));
-			
 			double b = (Math.ceil(a) - 1);
 			if (counter == 0){
 				b = b+1;
